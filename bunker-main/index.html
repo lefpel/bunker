@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Метатеги для работы браузера и определения описания сайта -->
+    <!-- Кодировка для правильного отображения символов на сайте -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Тут говорим, чтобы ширина сайта была равна ширине окна с масштабированием 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- имя сайта для разных стран -->
+    <meta name="application-name" content="Мой бункер" />
+    <meta name="application-name" lang="en" content="My Bunker" />
+    <meta name="application-name" lang="fr" content="Mi Bunker" />
+    <!-- подключение иконки сайта -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/aMPwWyxM4Sc.ico"
+      type="image/x-icon"
+    />
+    <!-- описание для поисковой выдачи -->
+    <meta
+      name="description"
+      content="Настольная игра в бункер, генератор персонажей для игры в бункер"
+    />
+    <meta name="keywords" content="Бункер, игры, настолки, веселье, " />
+
+    <!-- подключаем стили -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Бункер</title>
+    <!-- скрипт обязательно подключаем с атрибутом defer, чтобы он выполнялся только после загрузки страницы -->
+    <!-- также указываем тип - модуль. Нужно для подлючения в сам скрипт других файлов js -->
+    <script defer type="module" src="./assets/js/index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ol>
+          <li class="nav-item"><a href="/about.html">Как играть?</a></li>
+          <li class="nav-item" id="create-character">Создать персонажа</li>
+        </ol>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main-title-block">
+        <h1 class="main-title">БУНКЕР</h1>
+        <section class="person">
+          <ol>
+            <li class="person-item person-name">Имя:</li>
+            <li class="person-item person-age">Возраст:</li>
+            <li class="person-item person-profession">Профессия</li>
+            <li class="person-item person-work_experience">Стаж работы:</li>
+            <li class="person-item person-healthy">Здоровье:</li>
+            <li class="person-item person-fertility">Плодовитость:</li>
+            <li class="person-item person-fears">Страхи:</li>
+            <li class="person-item person-hobby">Хобби:</li>
+          </ol>
+        </section>
+      </div>
+
+      <img
+        src="./assets/images/bunker-background.jpg"
+        alt="изображение бункера"
+        class="main-background"
+      />
+    </main>
+    <div class="control-block">
+      <input class="range" type="range" />
+      <button class="music">
+        <img src="./assets/images/pngwing.com.png" alt="вкл/выкл" />
+      </button>
+    </div>
+    <audio class="music" src="./assets/audio/abstractambiences7.mp3"></audio>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+.music {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  background-color: rgb(87, 87, 87);
+  /* меняем указатель при наведении на блок */
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+  outline: none;
+}
+
+.music img {
+  width: 100%;
+  height: 100%;
+}
+
+/* при нажатии немного уменьшаем кнопку звука до 90% */
+.music:active {
+  transform: scale(0.9);
+}
+
+.control-block {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  left: 20px;
+  align-items: center;
+}
+
+.range {
+  transform: rotate(-90deg);
+  position: relative;
+  top: 30px;
+  /* меняем указатель при наведении на блок */
+  cursor: pointer;
+  width: 100px;
+  appearance: none;
+  background: none;
+  opacity: 0.2;
+  transition: 0.3s;
+}
+
+.range:hover {
+  opacity: 1;
+}
+
+/* линия */
+.range::-webkit-slider-runnable-track {
+  height: 40px;
+  background-color: rgba(173, 158, 158, 0.505);
+  border-radius: 20px;
+}
+
+/* кружок */
+.range::-webkit-slider-thumb {
+  background: #fdfdfd85;
+  cursor: pointer;
+  width: 35px;
+  height: 100%;
+  -webkit-appearance: none;
+  /* margin-top: -4px; */
+  border-radius: 50%;
+}
+
+/* .range::-moz-range-track {
+  height: 7px;
+  background-color: rgb(36, 36, 38);
+}
+
+.range::-moz-range-thumb {
+  background-color: rgba(110, 110, 110, 0.505);
+  cursor: pointer;
+  height: 7px;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+} */
+
+@media (max-width: 768px) {
+  .control-block {
+    top: 60px;
+    gap: 0;
+  }
+}
